@@ -1,4 +1,4 @@
-arr = map(int, input().split())
+arr = list(map(int, input().split()))
 arr_new = []
 
 for i in arr:
