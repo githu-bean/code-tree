@@ -6,10 +6,10 @@ index = 2
 tmp = 0
 
 while True:
-    tmp = arr[index-1] + arr[index-2]
-    arr.append(tmp)
+    #tmp = arr[index-1] + arr[index-2]
+    arr.append(arr[index-1] + arr[index-2])
 
-    if tmp > 100:
+    if arr[index] > 100:
         break
 
     index += 1
