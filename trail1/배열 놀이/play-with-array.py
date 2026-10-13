@@ -1,3 +1,5 @@
+# query가 어차피 (int, int)로 입력되기 때문에
+# query = tuple(map(int, input().split()))로 받으면 더 효율적인 코딩이 가능함
 N, Q = tuple(map(int, input().split()))
 
 arr = list(map(int, input().split()))
