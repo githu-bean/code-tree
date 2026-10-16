@@ -1,60 +1,51 @@
+# 최댓값을 찾고 -> 중복이 없는 경우만 출력
 N = int(input())
 
 arr = list(map(int, input().split()))
 
-unique_lst = []
+max = -1
 
-for i in range(N):
-    cnt = 0
+for i in arr:
 
-    for j in range(N):
-        if i != j and arr[i] == arr[j]:
-            cnt += 1
+    if max < i:
+        cnt = 0
 
-    if cnt == 0:
-        unique_lst.append(arr[i])
+        for j in arr:
 
-# print(unique_lst)
-
-if len(unique_lst) >= 1:            
-    max = unique_lst[0]
-    for i in unique_lst:
-        if max < i:
+            if i == j:
+                cnt += 1
+        if cnt == 1:
             max = i
-    print(max)
-else:
-    print(-1)
+
+print(max)
+
+    
 
 
+# # 중복없는 리스트 -> 최댓값 찾기 순서
+# N = int(input())
 
+# arr = list(map(int, input().split()))
 
+# unique_lst = []
 
-
-
-
-# n = int(input())
-# nums = list(map(int, input().split()))
-
-# # Please write your code here.
-# cnt_list = [0] * 1001
-
-# cnt = 0
-
-# for i in nums:
+# for i in range(N):
 #     cnt = 0
-#     for j in nums:
-#         if i == j:
+
+#     for j in range(N):
+#         if i != j and arr[i] == arr[j]:
 #             cnt += 1
-    
-#     cnt_list[i] = cnt
 
-# #print(cnt_list)
+#     if cnt == 0:
+#         unique_lst.append(arr[i])
 
-# dup_list = []
+# # print(unique_lst)
 
-# for i in range(1001):
-#     if cnt_list[i] == 1:
-#         dup_list.append(i)
-    
-    
-# print(max(dup_list) if len(dup_list) >= 1 else -1)
+# if len(unique_lst) >= 1:            
+#     max = unique_lst[0]
+#     for i in unique_lst:
+#         if max < i:
+#             max = i
+#     print(max)
+# else:
+#     print(-1)
