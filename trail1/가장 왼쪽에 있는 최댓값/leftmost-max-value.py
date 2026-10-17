@@ -4,17 +4,17 @@ arr = list(map(int, input().split()))
 idx_list = []
 
 while True:
-    idx_max = 0
+    idx_max = 0 # 일단 최댓값을 인덱스 0 원소로 설정
 
-    for i in range(n):
+    for i in range(n): # 리스트를 순회하며 최댓값 인덱스를 찾음
         if arr[idx_max] < arr[i]:
             idx_max = i
 
-    idx_list.append(idx_max)
+    idx_list.append(idx_max) # 찾은 최댓값 인덱스를 저장
 
-    n = idx_max
+    n = idx_max # 이제 리스트의 길이를 최댓값 인덱스로 변경 -> 최댓값 왼쪽까지만 탐색하겠다는 뜻
 
-    if idx_max == 0:
+    if idx_max == 0: # 가장 왼쪽에 도달하면 break
         break
 
 for i in idx_list:
